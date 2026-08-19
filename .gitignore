@@ -1,0 +1,41 @@
+# Dependencies
+/node_modules/
+
+# Next.js and production output
+/.next/
+/out/
+/build/
+
+# Environment files (keep the documented example)
+.env*
+!.env.example
+
+# Local media — published photography and video live outside Git
+/media/
+/public/media/
+/public/photos/
+/public/videos/
+*.psd
+*.tif
+*.tiff
+*.raw
+*.dng
+*.cr2
+*.cr3
+*.nef
+*.arw
+*.raf
+*.orf
+*.rw2
+*.mp4
+*.mov
+*.m4v
+*.avi
+*.mkv
+
+# Tooling and operating-system files
+*.tsbuildinfo
+*.log
+.DS_Store
+.idea/
+.vscode/
