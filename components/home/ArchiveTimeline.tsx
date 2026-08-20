@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { SectionLabel } from "@/components/SectionLabel";
 import { journeyChapters } from "@/data/journeys";
 import type { JourneyPlace } from "@/types/media";
 
@@ -16,11 +17,7 @@ export function ArchiveTimeline() {
       aria-labelledby="archive-timeline-title"
     >
       <div className="archive-timeline__inner">
-        <h2 className="section-label" id="archive-timeline-title">
-          <span>02</span>
-          <span className="section-label__dash" aria-hidden="true" />
-          <span>archive timeline</span>
-        </h2>
+        <SectionLabel as="h2" number="02" title="archive timeline" id="archive-timeline-title" />
 
         <div className="archive-timeline__desktop">
           <div className="archive-timeline__rail" aria-hidden="true">
@@ -30,7 +27,6 @@ export function ArchiveTimeline() {
             <span className="archive-timeline__dot archive-timeline__dot--2021" />
             <span className="archive-timeline__dot archive-timeline__dot--2024" />
             <span className="archive-timeline__dot archive-timeline__dot--2026" />
-            <span className="archive-timeline__arrow">→</span>
           </div>
 
           <div className="archive-timeline__chapters">

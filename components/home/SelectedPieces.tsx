@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { SectionLabel } from "@/components/SectionLabel";
+
 type SelectedPiece = {
   id: string;
   src: string;
@@ -27,9 +29,7 @@ export function SelectedPieces() {
     <section className="selected-pieces" id="selected-pieces" aria-labelledby="selected-pieces-title">
       <div className="selected-pieces__inner">
         <div className="selected-pieces__intro">
-          <p className="section-label">
-            <span>01</span><span className="section-label__dash" aria-hidden="true" /><span>selected pieces</span>
-          </p>
+          <SectionLabel number="01" title="selected pieces" />
           <h2 className="selected-pieces__title" id="selected-pieces-title">
             a few moments<br />i keep<br />returning to.
           </h2>
