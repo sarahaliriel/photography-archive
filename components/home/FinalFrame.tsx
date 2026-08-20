@@ -6,9 +6,9 @@ import { useEffect, useRef, useState } from "react";
 import { Footer } from "@/components/layout/Footer";
 
 const socialLinks = [
-  { label: "instagram", href: "https://www.instagram.com/sarahaliriel" },
+  { label: "instagram", href: "https://www.instagram.com/chazinhodociel" },
   { label: "github", href: "https://github.com/sarahaliriel" },
-  { label: "linkedin", href: "https://www.linkedin.com/in/sarahaliriel" },
+  { label: "linkedin", href: "https://www.linkedin.com/in/sarah-dumitrache/" },
 ] as const;
 
 export function FinalFrame() {
