@@ -41,17 +41,6 @@ export const journeyChapters: readonly JourneyChapter[] = [
     start: "aug 2026",
     places: [
       {
-        id: "iasi",
-        name: "Iași",
-        start: "aug 2026",
-        image: {
-          src: "/images/journeys/iasi.jpg",
-          width: 3000,
-          height: 4000,
-          alt: "Historic building with Romanian flags in Iași",
-        },
-      },
-      {
         id: "crasnaleuca",
         name: "Crasnaleuca",
         start: "aug 2026",
@@ -60,6 +49,17 @@ export const journeyChapters: readonly JourneyChapter[] = [
           width: 3000,
           height: 4000,
           alt: "Quiet rural home and garden in Crasnaleuca beneath open clouds",
+        },
+      },
+      {
+        id: "iasi",
+        name: "Iași",
+        start: "aug 2026",
+        image: {
+          src: "/images/journeys/iasi.jpg",
+          width: 3000,
+          height: 4000,
+          alt: "Historic building with Romanian flags in Iași",
         },
       },
     ],
