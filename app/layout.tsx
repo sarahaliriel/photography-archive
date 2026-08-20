@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 
+import { TitleReveal } from "@/components/TitleReveal";
+
 import "./globals.css";
 
 const geist = Geist({
@@ -21,7 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={geist.variable}>
-      <body>{children}</body>
+      <body>
+        <TitleReveal />
+        {children}
+      </body>
     </html>
   );
 }

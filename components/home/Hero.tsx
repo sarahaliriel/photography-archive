@@ -7,7 +7,7 @@ export function Hero() {
     <section className="hero" aria-labelledby="hero-title">
       <Image
         className="hero__image"
-        src="/images/hero/hero.jpg"
+        src="/images/home/hero/hero.jpg"
         alt="Airplane wing silhouetted against a blue and orange sunset above the clouds"
         fill
         priority
@@ -19,8 +19,8 @@ export function Hero() {
 
       <div className="hero__intro">
         <h1 id="hero-title">
-          <span>This is how</span>
-          <span>I see the world</span>
+          <span>this is how</span>
+          <span>i see the world</span>
         </h1>
         <p>my visual archive</p>
       </div>

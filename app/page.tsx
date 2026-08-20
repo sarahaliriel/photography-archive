@@ -1,7 +1,7 @@
 import { ArchiveTimeline } from "@/components/home/ArchiveTimeline";
+import { FinalFrame } from "@/components/home/FinalFrame";
 import { Hero } from "@/components/home/Hero";
 import { SelectedPieces } from "@/components/home/SelectedPieces";
-import { Footer } from "@/components/layout/Footer";
 
 export default function HomePage() {
   return (
@@ -9,7 +9,7 @@ export default function HomePage() {
       <Hero />
       <SelectedPieces />
       <ArchiveTimeline />
-      <Footer />
+      <FinalFrame />
     </main>
   );
 }

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const footerLinks = ["archive", "collections", "about", "contact"] as const;
+const footerLinks = ["about", "archive", "collections", "contact"] as const;
 
 export function Footer() {
   return (

@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { SectionLabel } from "@/components/SectionLabel";
+import { Footer } from "@/components/layout/Footer";
 
 export function ClosingSection() {
   return (
@@ -19,7 +20,7 @@ export function ClosingSection() {
             <span aria-hidden="true">→</span>
           </Link>
         </div>
-
+        <Footer />
       </div>
     </section>
   );

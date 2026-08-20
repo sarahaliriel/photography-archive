@@ -11,6 +11,7 @@ export function Navbar({ tone = "light" }: NavbarProps) {
       aria-label="Primary navigation"
     >
       <div className="hero-nav__links">
+        <Link href="/about">about</Link>
         <Link href="/archive">archive</Link>
         <Link href="/collections">collections</Link>
       </div>
