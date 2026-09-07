@@ -16,8 +16,8 @@ export const journeyChapters: readonly JourneyChapter[] = [
         end: "mar 2026",
         image: {
           src: "/images/home/journeys/lisboa.jpg",
-          width: 3000,
-          height: 4000,
+          width: 1600,
+          height: 2133,
           alt: "Monument to the Discoveries in Lisbon against a clear blue sky",
         },
       },
@@ -28,8 +28,8 @@ export const journeyChapters: readonly JourneyChapter[] = [
         end: "present",
         image: {
           src: "/images/home/journeys/povoa.jpg",
-          width: 2808,
-          height: 3744,
+          width: 1600,
+          height: 2133,
           alt: "Wide waterfront avenue in Póvoa de Varzim beneath a blue sky",
         },
       },
@@ -46,8 +46,8 @@ export const journeyChapters: readonly JourneyChapter[] = [
         start: "aug 2026",
         image: {
           src: "/images/home/journeys/crasnaleuca.jpg",
-          width: 3000,
-          height: 4000,
+          width: 1600,
+          height: 2133,
           alt: "Quiet rural home and garden in Crasnaleuca beneath open clouds",
         },
       },
@@ -57,8 +57,8 @@ export const journeyChapters: readonly JourneyChapter[] = [
         start: "aug 2026",
         image: {
           src: "/images/home/journeys/iasi.jpg",
-          width: 3000,
-          height: 4000,
+          width: 1600,
+          height: 2133,
           alt: "Historic building with Romanian flags in Iași",
         },
       },

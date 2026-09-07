@@ -20,10 +20,10 @@ export function AboutIntro() {
             className="about-intro__image"
             src="/images/about/pieces-of-me/sarah-intro.jpg"
             alt="Sarah photographing the sea at sunset"
-            width={2515}
-            height={2649}
+            width={1400}
+            height={1474}
             priority
-            sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1023px) 54vw, 25vw"
+            sizes="(max-width: 767px) min(calc(100vw - 40px), 23rem), (max-width: 1023px) 22rem, min(29vw, 25rem)"
           />
         </div>
 

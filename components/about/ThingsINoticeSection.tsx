@@ -1,7 +1,7 @@
 "use client";
 
 import Image, { type StaticImageData } from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { SectionLabel } from "@/components/SectionLabel";
 import animalsImage from "@/public/images/about/things-noticed/animals.jpg";
@@ -25,6 +25,25 @@ const observations: readonly Observation[] = [
   { title: "lines, shapes & repetition", image: linesImage, alt: "Repeating lines and geometric shapes" },
   { title: "the city becoming quiet", image: cityImage, alt: "A city street settling into a quiet moment" },
 ] as const;
+
+function ActiveObservationImage({ observation }: { observation: Observation }) {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const animationFrame = requestAnimationFrame(() => setIsVisible(true));
+    return () => cancelAnimationFrame(animationFrame);
+  }, []);
+
+  return (
+    <Image
+      className={isVisible ? "is-active" : undefined}
+      src={observation.image}
+      alt={observation.alt}
+      placeholder="blur"
+      sizes="(max-width: 767px) min(calc(100vw - 40px), 30rem), (max-width: 1023px) 31rem, 39rem"
+    />
+  );
+}
 
 export function ThingsINoticeSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -76,16 +95,9 @@ export function ThingsINoticeSection() {
 
         <figure className={activeObservation ? "things-i-notice__visual is-active" : "things-i-notice__visual"} id="things-i-notice-photo">
           <div className="things-i-notice__frame">
-            {observations.map((observation, index) => (
-              <Image
-                className={activeIndex === index ? "is-active" : undefined}
-                key={observation.title}
-                src={observation.image}
-                alt={activeIndex === index ? observation.alt : ""}
-                placeholder="blur"
-                sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1100px) 44vw, 46vw"
-              />
-            ))}
+            {activeObservation ? (
+              <ActiveObservationImage key={activeObservation.title} observation={activeObservation} />
+            ) : null}
             <span className="things-i-notice__empty-label" aria-hidden="true">select a detail</span>
           </div>
           <figcaption aria-live="polite">
