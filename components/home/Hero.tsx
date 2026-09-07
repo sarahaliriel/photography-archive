@@ -11,7 +11,6 @@ export function Hero() {
         alt="Airplane wing silhouetted against a blue and orange sunset above the clouds"
         fill
         priority
-        quality={92}
         sizes="100vw"
       />
 

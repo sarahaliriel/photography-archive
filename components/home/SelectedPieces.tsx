@@ -51,7 +51,7 @@ export function SelectedPieces() {
 function SelectedPieceImage({ piece }: { piece: SelectedPiece }) {
   return (
     <figure className={`selected-pieces__item ${piece.placement}`}>
-      <Image className="selected-pieces__image" src={piece.src} alt={piece.alt} width={piece.width} height={piece.height} sizes={piece.sizes} quality={90} />
+      <Image className="selected-pieces__image" src={piece.src} alt={piece.alt} width={piece.width} height={piece.height} sizes={piece.sizes} />
     </figure>
   );
 }

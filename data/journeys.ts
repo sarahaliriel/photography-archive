@@ -15,7 +15,7 @@ export const journeyChapters: readonly JourneyChapter[] = [
         start: "2021",
         end: "mar 2026",
         image: {
-          src: "/images/journeys/lisboa.jpg",
+          src: "/images/home/journeys/lisboa.jpg",
           width: 3000,
           height: 4000,
           alt: "Monument to the Discoveries in Lisbon against a clear blue sky",
@@ -27,7 +27,7 @@ export const journeyChapters: readonly JourneyChapter[] = [
         start: "apr 2026",
         end: "present",
         image: {
-          src: "/images/journeys/povoa.jpg",
+          src: "/images/home/journeys/povoa.jpg",
           width: 2808,
           height: 3744,
           alt: "Wide waterfront avenue in Póvoa de Varzim beneath a blue sky",
@@ -45,7 +45,7 @@ export const journeyChapters: readonly JourneyChapter[] = [
         name: "Crasnaleuca",
         start: "aug 2026",
         image: {
-          src: "/images/journeys/crasnaleuca.jpg",
+          src: "/images/home/journeys/crasnaleuca.jpg",
           width: 3000,
           height: 4000,
           alt: "Quiet rural home and garden in Crasnaleuca beneath open clouds",
@@ -56,7 +56,7 @@ export const journeyChapters: readonly JourneyChapter[] = [
         name: "Iași",
         start: "aug 2026",
         image: {
-          src: "/images/journeys/iasi.jpg",
+          src: "/images/home/journeys/iasi.jpg",
           width: 3000,
           height: 4000,
           alt: "Historic building with Romanian flags in Iași",

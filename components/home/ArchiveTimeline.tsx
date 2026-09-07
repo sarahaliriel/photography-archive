@@ -79,7 +79,6 @@ function PlaceFigure({ place }: { place: JourneyPlace }) {
           width={place.image.width}
           height={place.image.height}
           sizes="(max-width: 767px) 88vw, (max-width: 1023px) 42vw, 19vw"
-          quality={90}
         />
       </div>
       <figcaption>

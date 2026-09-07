@@ -18,12 +18,11 @@ export function AboutIntro() {
 
           <Image
             className="about-intro__image"
-            src="/images/about/sarah-intro.jpg"
+            src="/images/about/pieces-of-me/sarah-intro.jpg"
             alt="Sarah photographing the sea at sunset"
             width={2515}
             height={2649}
             priority
-            quality={92}
             sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1023px) 54vw, 25vw"
           />
         </div>

@@ -40,7 +40,6 @@ export function PiecesOfMeSection() {
               alt={photo.alt}
               width={photo.width}
               height={photo.height}
-              quality={92}
               sizes="(max-width: 767px) 82vw, (max-width: 1023px) 38vw, 24vw"
             />
           </figure>
