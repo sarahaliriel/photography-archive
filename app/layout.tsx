@@ -3,7 +3,9 @@ import { Geist } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 
 import { TitleReveal } from "@/components/TitleReveal";
+import { SmoothScroll } from "@/components/layout/SmoothScroll";
 
+import "lenis/dist/lenis.css";
 import "./globals.css";
 
 const geist = Geist({
@@ -25,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={geist.variable}>
       <body>
+        <SmoothScroll />
         <TitleReveal />
         {children}
         <Analytics />
