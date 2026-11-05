@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { SoundControl } from "@/components/layout/SoundControl";
 
 type NavbarProps = {
   tone?: "light" | "dark";
@@ -21,9 +22,12 @@ export function Navbar({ tone = "light" }: NavbarProps) {
         <Link href="/collections">collections</Link>
       </div>
 
-      <a href="https://www.sarahaliriel.tech/" aria-label="Sarah Aliriel portfolio">
-        sarah aliriel
-      </a>
+      <div className="hero-nav__end">
+        <SoundControl />
+        <a href="https://www.sarahaliriel.tech/" aria-label="Sarah Aliriel portfolio">
+          sarah aliriel
+        </a>
+      </div>
     </nav>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { TitleReveal } from "@/components/TitleReveal";
+import { AmbientAudioProvider } from "@/components/layout/AmbientAudio";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
 
 import "lenis/dist/lenis.css";
@@ -28,7 +29,7 @@ export default function RootLayout({
       <body>
         <SmoothScroll />
         <TitleReveal />
-        {children}
+        <AmbientAudioProvider>{children}</AmbientAudioProvider>
         <Analytics />
       </body>
     </html>

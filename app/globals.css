@@ -175,6 +175,84 @@ a {
   text-shadow: 0 1px 8px rgba(5, 15, 31, 0.16);
 }
 
+.hero-nav__end {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 1vw, 0.875rem);
+  white-space: nowrap;
+}
+
+.sound-control {
+  position: relative;
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.sound-control:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 1px;
+}
+
+.sound-control__wave {
+  display: flex;
+  width: 1.4rem;
+  height: 1.2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sound-control__bar {
+  width: 1.5px;
+  height: var(--bar-height);
+  border-radius: 45% 55% 48% 52%;
+  background: currentColor;
+  transform: rotate(var(--bar-tilt)) scaleY(1);
+  transition: transform 110ms ease-out, opacity 180ms ease;
+  opacity: 0.72;
+}
+
+.sound-control__bar:nth-child(1) { --bar-height: 0.36rem; --bar-tilt: -5deg; transform: rotate(var(--bar-tilt)) scaleY(var(--wave-0, 1)); }
+.sound-control__bar:nth-child(2) { --bar-height: 0.72rem; --bar-tilt: 3deg; transform: rotate(var(--bar-tilt)) scaleY(var(--wave-1, 1)); }
+.sound-control__bar:nth-child(3) { --bar-height: 1rem; --bar-tilt: -2deg; transform: rotate(var(--bar-tilt)) scaleY(var(--wave-2, 1)); }
+.sound-control__bar:nth-child(4) { --bar-height: 0.63rem; --bar-tilt: 5deg; transform: rotate(var(--bar-tilt)) scaleY(var(--wave-3, 1)); }
+.sound-control__bar:nth-child(5) { --bar-height: 0.42rem; --bar-tilt: -4deg; transform: rotate(var(--bar-tilt)) scaleY(var(--wave-4, 1)); }
+
+.sound-control--playing .sound-control__bar { opacity: 1; }
+
+.sound-control__hint {
+  position: absolute;
+  right: calc(100% + 0.35rem);
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  transition: opacity 180ms ease;
+}
+
+@media (hover: hover) and (min-width: 48rem) {
+  .sound-control:hover .sound-control__hint { opacity: 1; }
+}
+
+@media (min-width: 48rem) {
+  .sound-control:focus-visible .sound-control__hint { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sound-control__bar { transform: rotate(var(--bar-tilt)) !important; }
+  .sound-control--playing .sound-control__bar { opacity: 1; }
+  .sound-control:not(.sound-control--playing) .sound-control__bar { opacity: 0.55; }
+}
+
 .hero-nav--dark {
   color: var(--color-foreground);
 }
