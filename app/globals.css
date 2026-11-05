@@ -1878,3 +1878,141 @@ a {
     gap: 1rem;
   }
 }
+
+/* A quiet interlude for paths outside the archive. */
+.not-found {
+  --photo-x: 0px;
+  --photo-y: 0px;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: hidden;
+  background: #172237;
+  color: #f7f5ef;
+  text-align: center;
+}
+
+.not-found__photo {
+  z-index: -3;
+  max-width: none;
+  width: calc(100% + 24px) !important;
+  height: calc(100% + 24px) !important;
+  inset: -12px !important;
+  object-fit: cover;
+  object-position: center 55%;
+  transform: translate3d(var(--photo-x), var(--photo-y), 0);
+  transition: transform 900ms cubic-bezier(.2,.7,.25,1);
+}
+
+.not-found__shade {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 42%, rgba(8, 16, 30, .28), rgba(7, 13, 26, .58));
+  pointer-events: none;
+}
+
+.not-found::after {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.88' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)' opacity='.75'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  mix-blend-mode: overlay;
+  opacity: .52;
+  pointer-events: none;
+  animation: hero-film-grain .32s steps(1,end) infinite;
+}
+
+.not-found__content {
+  width: 100%;
+  padding: max(2rem, env(safe-area-inset-top)) 1rem max(2rem, env(safe-area-inset-bottom));
+  transform: translateY(-1vh);
+}
+
+.not-found__code {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(.1rem, 1.6vw, 1.75rem);
+  height: clamp(8rem, 24vw, 21rem);
+  white-space: nowrap;
+}
+
+.not-found__digit {
+  display: block;
+  font-size: clamp(8rem, 25vw, 22rem);
+  font-weight: 300;
+  line-height: .75;
+  letter-spacing: -.095em;
+  text-shadow: 0 3px 28px rgba(6, 12, 28, .1);
+  transition: opacity 500ms ease;
+}
+
+.not-found__digit--right { margin-left: clamp(-1.5rem, -1.5vw, -.35rem); }
+
+.not-found__eye {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: clamp(8rem, 25vw, 21rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.not-found__eye svg { width: 100%; height: 100%; overflow: visible; }
+.not-found__eye:focus-visible { outline: 1px solid rgba(255,255,255,.85); outline-offset: -1.2rem; }
+
+.not-found__message {
+  margin: clamp(.5rem, 2vh, 1.5rem) 0 0;
+  font-size: clamp(.85rem, 1.4vw, 1.1rem);
+  font-weight: 400;
+  letter-spacing: .04em;
+  line-height: 1.4;
+  text-shadow: 0 2px 14px rgba(6,12,28,.3);
+  transition: opacity 330ms ease, transform 450ms ease;
+}
+.not-found__hint {
+  margin: clamp(1.6rem, 4vh, 2.8rem) 0 0;
+  font-size: .68rem;
+  letter-spacing: .12em;
+  opacity: .55;
+  transition: opacity 330ms ease, transform 450ms ease;
+}
+.not-found__content:has(.not-found__eye:hover) .not-found__hint,
+.not-found__content:has(.not-found__eye:focus-visible) .not-found__hint { opacity: .9; }
+.not-found--leaving .not-found__digit { opacity: 0; }
+.not-found--leaving .not-found__message,
+.not-found--leaving .not-found__hint { opacity: 0; transform: translateY(.5rem); }
+
+.home-reveal {
+  position: fixed;
+  z-index: 10000;
+  inset: 0;
+  overflow: hidden;
+  background: #132d51;
+  clip-path: circle(0 at var(--reveal-x, 50%) var(--reveal-y, 50%));
+  pointer-events: none;
+}
+.home-reveal .hero { height: 100%; min-height: 100%; }
+
+@media (max-width: 600px) {
+  .not-found__code { gap: 0; height: clamp(7rem, 30vw, 10rem); }
+  .not-found__digit { font-size: clamp(7rem, 31vw, 10rem); }
+  .not-found__eye { width: clamp(7rem, 30vw, 10rem); }
+  .not-found__message { padding-inline: .5rem; }
+  .not-found__photo { object-position: 60% center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .not-found__photo, .not-found__digit, .not-found__message, .not-found__hint { transition: none; }
+  .not-found::after { animation: none; }
+}

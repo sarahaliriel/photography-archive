@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { TitleReveal } from "@/components/TitleReveal";
 import { AmbientAudioProvider } from "@/components/layout/AmbientAudio";
+import { HomeReveal } from "@/components/layout/HomeReveal";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
 
 import "lenis/dist/lenis.css";
@@ -29,7 +30,10 @@ export default function RootLayout({
       <body>
         <SmoothScroll />
         <TitleReveal />
-        <AmbientAudioProvider>{children}</AmbientAudioProvider>
+        <AmbientAudioProvider>
+          {children}
+          <HomeReveal />
+        </AmbientAudioProvider>
         <Analytics />
       </body>
     </html>
