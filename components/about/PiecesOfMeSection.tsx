@@ -3,13 +3,14 @@ import Image from "next/image";
 import { SectionLabel } from "@/components/SectionLabel";
 
 const photos = [
-  { name: "eyes", src: "/images/about/pieces-of-me/eyes.jpg", alt: "Sarah in warm window light", width: 1200, height: 1545, sizes: "(max-width: 767px) 66vw, (max-width: 1023px) 31vw, 19vw" },
-  { name: "boots", src: "/images/about/pieces-of-me/boots.jpg", alt: "Black boots held up against the beach at sunset", width: 1496, height: 1260, sizes: "(max-width: 767px) 59vw, (max-width: 1023px) 21vw, 17vw" },
+  { name: "eyes", src: "/images/about/pieces-of-me/eyes.jpg", alt: "Sarah looking through her hand", width: 2048, height: 1539, sizes: "(max-width: 767px) 66vw, (max-width: 1023px) 31vw, 19vw" },
   { name: "looksz", src: "/images/about/pieces-of-me/looksz.jpg", alt: "A quiet moment seen through a mirror", width: 1424, height: 1300, sizes: "(max-width: 767px) 53vw, (max-width: 1023px) 23vw, 15vw" },
   { name: "sarah", src: "/images/about/pieces-of-me/sarah.jpg", alt: "Sarah outdoors", width: 1400, height: 1866, sizes: "(max-width: 767px) 75vw, (max-width: 1023px) 38vw, 23vw" },
   { name: "shadow", src: "/images/about/pieces-of-me/shadow.jpg", alt: "A long shadow in the landscape", width: 1200, height: 1739, sizes: "(max-width: 767px) 53vw, (max-width: 1023px) 25vw, 16vw" },
   { name: "mirror", src: "/images/about/pieces-of-me/mirror-photo.jpg", alt: "A reflection in a mirror", width: 905, height: 1203, sizes: "(max-width: 767px) 44vw, (max-width: 1023px) 20vw, 17vw" },
   { name: "lili", src: "/images/about/pieces-of-me/lili-and-me.jpg", alt: "Lili and Sarah together", width: 1400, height: 1863, sizes: "(max-width: 767px) 66vw, (max-width: 1023px) 32vw, 17vw" },
+  { name: "sasukeee", src: "/images/about/pieces-of-me/sasukeee.jpg", alt: "Sarah with playful face paint", width: 652, height: 724, sizes: "(max-width: 767px) 53vw, (max-width: 1023px) 23vw, 15vw" },
+  { name: "beach", src: "/images/about/pieces-of-me/beach.jpeg", alt: "Sarah standing barefoot at the water's edge", width: 2048, height: 1539, sizes: "(max-width: 767px) 76vw, (max-width: 1023px) 42vw, 28vw" },
 ] as const;
 
 function Note({ className, children }: { className: string; children: React.ReactNode }) {
