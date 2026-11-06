@@ -1106,7 +1106,10 @@ a {
   }
 }
 
-.things-i-notice { background: var(--color-background); }
+.things-i-notice {
+  margin-top: -4rem;
+  background: var(--color-background);
+}
 
 .things-i-notice__inner {
   display: grid;
@@ -1361,6 +1364,8 @@ a {
 }
 
 @media (max-width: 63.999rem) {
+  .things-i-notice { margin-top: 0; }
+
   .things-i-notice__inner {
     min-height: auto;
     padding-block: clamp(5rem, 9vw, 7rem);
