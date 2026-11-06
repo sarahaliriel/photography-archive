@@ -34,7 +34,7 @@ export function HomeReveal() {
     node.style.setProperty("--reveal-y", `${y}px`);
     const animation = node.animate(
       [{ clipPath: `circle(0px at ${x}px ${y}px)` }, { clipPath: `circle(${radius}px at ${x}px ${y}px)` }],
-      { duration: 1050, easing: "cubic-bezier(.3,.65,.18,1)", fill: "forwards" }
+      { duration: 1450, easing: "cubic-bezier(.22,.55,.16,1)", fill: "forwards" }
     );
     animation.onfinish = () => {
       node.style.clipPath = `circle(150vmax at ${x}px ${y}px)`;

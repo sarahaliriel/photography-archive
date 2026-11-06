@@ -1881,8 +1881,6 @@ a {
 
 /* A quiet interlude for paths outside the archive. */
 .not-found {
-  --photo-x: 0px;
-  --photo-y: 0px;
   position: relative;
   isolation: isolate;
   display: grid;
@@ -1903,8 +1901,6 @@ a {
   inset: -12px !important;
   object-fit: cover;
   object-position: center 55%;
-  transform: translate3d(var(--photo-x), var(--photo-y), 0);
-  transition: transform 900ms cubic-bezier(.2,.7,.25,1);
 }
 
 .not-found__shade {
@@ -1941,6 +1937,7 @@ a {
   gap: clamp(.1rem, 1.6vw, 1.75rem);
   height: clamp(8rem, 24vw, 21rem);
   white-space: nowrap;
+  transform: translateX(clamp(-2.5rem, -2.5vw, -.7rem));
 }
 
 .not-found__digit {
@@ -2013,6 +2010,6 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .not-found__photo, .not-found__digit, .not-found__message, .not-found__hint { transition: none; }
+  .not-found__digit, .not-found__message, .not-found__hint { transition: none; }
   .not-found::after { animation: none; }
 }
